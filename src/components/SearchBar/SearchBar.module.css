@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    margin: auto;
+    width: 30%;
+    justify-content: space-around;
+}
+
+.container input {
+    border-radius: 5px;
+    height: 30px;
+
+}
+
+.container button {
+    border-radius: 5px;
+    height: 30px;
+    background-color: rgb(48, 90, 48);
+    color: whitesmoke;
+}

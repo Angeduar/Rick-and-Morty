@@ -1,9 +1,9 @@
-import Card from './Card';
+import Card from '../Card/Card';
 
 export default function Cards(props) {
    const { characters } = props;
    return (
-   <div>
+   <div style={{display: 'flex' , justifyContent: 'space-evenly'}}>
       {characters.map((e) => {
          return <Card
          key = {e.name} 

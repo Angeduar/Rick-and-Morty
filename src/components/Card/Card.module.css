@@ -1,0 +1,30 @@
+.prueba{
+    border: solid rgb(48, 45, 45);
+    background-color: gray;
+    border-radius: 10px;
+    width: 180px;
+    padding: 10px;
+    box-shadow: 0 0 20px rgb(32, 167, 72);
+}
+
+.image{
+    width: 100%;
+}
+
+.button1 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button1 button {
+    margin: 3px 3px 0px 0px;
+    background-color: rgb(231, 83, 83);
+    color: whitesmoke;
+    border: none;
+    border-radius: 3px;
+}
+
+.data {
+    display: flex;
+    justify-content: space-around;
+}
