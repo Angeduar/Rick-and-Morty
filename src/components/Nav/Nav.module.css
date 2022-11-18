@@ -1,0 +1,6 @@
+.container {
+    border: 3px solid red;
+    display:flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
