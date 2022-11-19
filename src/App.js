@@ -1,11 +1,15 @@
 import { useState } from 'react';
 import Cards from './components/Cards/Cards.jsx'
 import Nav from './components/Nav/Nav.jsx'
+import {Routes, Route} from 'react-router-dom';
+import About from './components/About/About.jsx';
+import Detail from './components/Detail/Detail.jsx'
 
 function App () {
   const [characters, setCharacters]= useState([]);
-  
+
   function onSearch(character) {
+    console.log(character);
     fetch(`https://rickandmortyapi.com/api/character/${character}`)
        .then((response) => response.json())
        .then((data) => {
@@ -23,15 +27,12 @@ function App () {
 
   return (
     <div className='App' style={{ padding: '25px' }}>
-      <div>
-        <Nav onSearch={onSearch}/>
-      </div>
-      <div>
-        <Cards
-          characters={characters}
-          onClose={onClose}
-        />
-      </div>
+      <Nav onSearch={onSearch}/>
+      <Routes>
+        <Route path='/' element={<Cards characters={characters} onClose={onClose}/>}/>
+        <Route path='/about' element={<About characters={characters}/>}/>
+        <Route path='/detail/:detailId' element={<Detail/>} />
+      </Routes>
     </div>
   )
 }
